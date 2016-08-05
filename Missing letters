@@ -1,0 +1,20 @@
+function fearNotLetter(str) {
+ var a=[];
+  var t=str.split('');
+  var m=0;
+    for(var i=0;i<t.length;i++){
+    if(t[i].charCodeAt()+1===t[i+1].charCodeAt()){
+      m++;
+    }
+    else{
+      for(var j=t[i].charCodeAt()+1;j<=t[i+1].charCodeAt()-1;j++){
+        //return String.fromCharCode(j);
+        a.push(String.fromCharCode(j));
+      }
+      return a.join();
+  }
+    if(m===t.length-1) return undefined;  
+    }
+}
+
+fearNotLetter("abcj");
